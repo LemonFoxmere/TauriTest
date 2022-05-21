@@ -12,11 +12,8 @@ struct Payload {
 }
 
 fn main() {
-  let quit = CustomMenuItem::new("quit".to_string(), "Quit");
-  let close = CustomMenuItem::new("close".to_string(), "Close");
   let submenu = Submenu::new("Tauri Test", Menu::new()
-    .add_item(quit)
-    .add_item(close)
+    .add_native_item(MenuItem::Quit)
   );
 
   let editmenu = Submenu::new("Edit", Menu::new()
